@@ -82,7 +82,7 @@ async function getRecipes() {
   // EXPOSE - START (All expose numbers start with A)
   // A1. TODO - Check local storage to see if there are any recipes.
   //            If there are recipes, return them.
-  var recipes = localStorage.getItem('recipes');
+  var recipes = JSON.parse(localStorage.getItem('recipes'));
   if (recipes != null){
     return recipes;
   }
